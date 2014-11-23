@@ -89,6 +89,23 @@ public function add() {
 
 
 
+
+    
+    public function selectdelete($id) {
+    
+    // クリックされたら（リクエスト）、そのＵＲＬＩＤと一致するＤＢを見つけ、消す
+
+    if ($this->request->delete($id)) {
+    $this->Session->setFlash(__('The post with id: %s has been deleted.', h($id)));
+    return $this->redirect(array('action' => 'index'));
+    }
+    
+}//selectdelete
+
+
+
+
+
 /*
     
     public function view($id = null) {

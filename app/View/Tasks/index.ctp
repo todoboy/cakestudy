@@ -1,6 +1,6 @@
 <table>
     <tr>
-        <th></th>
+        <th>完了チェック欄</th>
         <!--<th>ID</th>-->
         <th>名前</th>
         <th>詳細</th>
@@ -17,7 +17,7 @@
         <td><?php echo h($row['Task']['deadtime']);?></td>
         <td><?php echo h($row['Task']['created']);?></td>
         <td><?php echo h($row['Task']['modified']);?> <?php echo $this->Html->link('編集', array('action'=>'edit', $row['Task']['id'])); ?> <?php echo $this->Form->postLink(
-                '完了',
+                '消去',
                 array('action' => 'delete', $row['Task']['id']),
                 array('confirm' => 'Are you sure?'));
             ?></td>
